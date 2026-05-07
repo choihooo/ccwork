@@ -2,7 +2,7 @@ import { Note } from '../types/note';
 
 const API_URL = 'http://localhost:3001';
 
-export async function fetchNotes(): Promise<Note[]> {
+export async function getNotes(): Promise<Note[]> {
   const res = await fetch(`${API_URL}/notes`);
   if (!res.ok) throw new Error('Failed to fetch notes');
   return res.json();

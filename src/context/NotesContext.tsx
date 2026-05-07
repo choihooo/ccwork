@@ -20,7 +20,7 @@ export function NotesProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     api
-      .fetchNotes()
+      .getNotes()
       .then(setNotes)
       .catch((e) => setError(e.message))
       .finally(() => setLoading(false));
